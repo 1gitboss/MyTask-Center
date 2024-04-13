@@ -1,0 +1,219 @@
+/* Basic styling for the chore boxes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Poppins','Montserrat', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #9a573f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.task-boxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.sidebar{
+    display: flex;
+    flex:1;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding-top: 50px;
+    padding-left: 50px ;
+    width: 200px;
+    background-color: #333;
+    gap: 30px;
+}
+.main-container{
+    flex:4;
+}
+
+#main-list{
+    width: inherit;
+}
+
+#logout{
+    margin-top: 60vh;
+}
+.nav-btn{
+    border-radius: 8px;
+    padding: 5px 10px;
+    background-color: #5b5b5b;
+    width: 150px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+div .nav-btn:hover{
+    transform: scale(1.1);
+}
+.sidebar a{
+    text-decoration: none;
+    padding: 10px 15px;
+    color: white;
+}
+section{
+    margin-left: 200px;
+    padding: 20px;
+}
+.task-box {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.task-box:hover {
+    background-color: #f2f2f2;
+}
+
+.incomplete {
+    background-color: hsla(0, 100%, 70%, 0.8);
+}
+
+.completed {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.in-progress {
+    background-color: #ffcc00;
+}
+
+.task-box i {
+    font-size: 36px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.task-box p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.task-box h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Placeholder for the task list (customize as needed) */
+.task-list {
+    margin-top: 20px;
+    font-size: 18px;
+}
+a{
+    color: black;
+}
+a:hover {
+    color: #666666;
+
+}
+
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+
+}
+
+.container {
+    /*max-width: 800px;*/
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table {
+    max-width: 100%;
+    overflow: hidden;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+section{
+    margin-left: 200px;
+    padding: 20px;
+}
+
+.form {
+    display: none ;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+form {
+    display: grid;
+    width: 450px;
+    gap: 10px;
+}
+
+button#close-form {
+    border-radius: 8px;
+    width: 45%;
+    background-color: #f44336;
+    color: #fff;
+}
+
+input,select{
+    border-radius: 8px;
+    padding: 13px;
+}
+#button-cont{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    width: 45%;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

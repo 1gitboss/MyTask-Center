@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #F1F2F6;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+}
+
+a{
+    color: inherit;
+    font-family:inherit;   
+    text-decoration: none;
+}
+
+h3,h1{
+    font-family: Hammersmith One;
+}
+section{
+    padding: 10px;
+    /* m-height: 100%; */
+}
+
+nav {
+    background: #ad863f;
+    color: white;
+    position: fixed;
+    top: 0;
+    height: 75px;
+    line-height: 75px;
+    width: 100%;
+    z-index: 10;
+  }
+
+.container-header{
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+}@media(max-width:767px){
+    .container-header{width: 90%;}
+} @media(max-width:638px){
+    .container-header{
+        width:100%
+    }
+}
+
+.logo{
+    float:left;
+    margin-top: 7px;
+    margin-left: 30px;
+    height: 30px;
+    /* letter-spacing: 1px;
+    text-transform: uppercase; */
+    cursor: pointer;
+} @media (max-width: 768px)  {
+   .logo{ margin-left: 5px;}
+}
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+nav ul {
+    display: inline-block;
+    float: right;
+    list-style: none;
+    margin-right: 20px;
+    margin-top: -2px;
+    text-align: right;
+    /* transition: transform 0.5s ease-out;
+    -webkit-transition: transform 0.5s ease-out; */
+  } @media(max-width: 723px) {
+      nav ul {
+        display: none;
+      }
+    } @media(orientation: landscape) {
+        nav ul {
+          display: inline-block;
+        }
+      }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav li a {
+    color: rgb(209, 209, 209);    
+    height: 50px;
+
+    letter-spacing: 1px;
+    margin: 0 20px;
+    padding: 8px;
+    position: relative;
+    text-decoration: none;
+    
+    /* transition: all 0.5s ease; */
+    /* -webkit-transition: all 0.5s ease; */
+  }
+  
+
+nav ul li a:hover{
+    /* transition: 1s ; */
+    box-shadow: 10px 8px 40px 40px #794000 inset, 10px 8px 40px 40px orangered inset, 
+                10px 8px 40px 40px #794000 inset, 10px 8px 40px 40px orangered inset;
+} 
+
+nav .signup{
+    background-position-y: center;
+    padding: 8px;
+    align-self: center;;
+    margin-top: 1px;
+    margin-bottom: 20px;
+    background-color: #794000; ;
+}
+
+@media(max-width:723px){
+    .menuIcon{
+       cursor: pointer;
+       display:block;
+       position:fixed;
+       right: 15px;
+       top: 20px;
+       height: 23px;
+       width:27px;
+       z-index: 12;
+    }
+}
+
+#hero-section{
+    background-image: url("../assests/images/Untitled-design.png") ; 
+    background-size: cover;
+    height: 80vh;
+    min-height: 620px;
+    display:flex ;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    /* background-color: rgb(84, 84, 84); */
+    background-blend-mode:multiply ;
+    flex-direction: column;
+}
+
+/* #hero-section h1 */
+#section-2 {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    
+}
+#features{
+    margin-top: 40px;
+    justify-content: center;
+    padding: 50px;
+    display: flex;
+    gap: 100px;
+}
+
+#feature-info{
+    text-align: justify;
+    width: 400px;
+}
+
+#section-2 h3{
+    font-size: 40px;
+
+}
+
+#section-3{
+    background-color: #F1F2F6;
+    display:flex;
+    padding: 70px;
+    gap: 00px;
+}
+#review-quote{
+    position: relative;
+    top: 60px;
+    width: 50%;
+    padding-top: 50px;
+    padding-right: 160px;
+    font-size: 30px;
+    text-align: justify;
+}
+#pic-container{
+    padding: 30px;
+    /* margin-right: ; */
+}
+#review-pic{
+    width: 830px;
+}
+
+#hero-button{
+    position: absolute;
+    top:70vh;
+}
+
+button{
+    margin-top: 10px;
+    background-color: #794000;
+    color: whitesmoke;
+    padding: 10px;
+    border: none;
+    border-radius: 16px;
+}
+
+#action-button{
+    margin-top: 10px;
+    background-color: rgb(255, 68, 0);
+    color: whitesmoke;
+    padding: 10px;
+    border: none;
+    font-size: larger;
+    font-family: inherit;
+    border-radius: 12px;
+    cursor: pointer;
+}

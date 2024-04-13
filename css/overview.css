@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #F1F2F6;
+    font-family: 'Poppins', 'Montserrat', sans-serif, 'Times New Roman', serif ;
+}
+
+a{
+    color: inherit;
+    font-family:inherit;
+    text-decoration: none;
+}
+a,
+a:visited,
+a:hover {
+    text-decoration: none;
+}
+
+h3,h1{
+    font-family: Hammersmith One;
+}
+
+nav {
+    background: #ad863f;
+    color: white;
+    position: fixed;
+    top: 0;
+    height: 75px;
+    line-height: 75px;
+    width: 100%;
+    z-index: 10;
+}
+
+.container-header{
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+}@media(max-width:767px){
+    .container-header{width: 90%;}
+} @media(max-width:638px){
+    .container-header{
+        width:100%
+    }
+}
+
+.logo{
+    float:left;
+    margin-top: 7px;
+    margin-left: 30px;
+    height: 30px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+} @media (max-width: 768px)  {
+    .logo{ margin-left: 5px;}
+}
+
+nav ul {
+    display: inline-block;
+    float: right;
+    list-style: none;
+    margin-right: 20px;
+    margin-top: -2px;
+    text-align: right;
+    /* transition: transform 0.5s ease-out;
+    -webkit-transition: transform 0.5s ease-out; */
+} @media(max-width: 723px) {
+    nav ul {
+        display: none;
+    }
+} @media(orientation: landscape) {
+    nav ul {
+        display: inline-block;
+    }
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav li a {
+    color: rgb(209, 209, 209);
+    height: 50px;
+
+    letter-spacing: 1px;
+    margin: 0 20px;
+    padding: 8px;
+    position: relative;
+    text-decoration: none;
+
+    /* transition: all 0.5s ease; */
+    /* -webkit-transition: all 0.5s ease; */
+}
+
+
+nav ul li a:hover{
+    /* transition: 1s ; */
+    box-shadow: 10px 8px 40px 40px #794000 inset, 10px 8px 40px 40px orangered inset,
+    10px 8px 40px 40px #794000 inset, 10px 8px 40px 40px orangered inset;
+}
+
+nav .signup{
+    background-position-y: center;
+    padding: 8px;
+    align-self: center;;
+    margin-top: 1px;
+    margin-bottom: 20px;
+    background-color: #794000; ;
+}
+
+@media(max-width:723px){
+    .menuIcon{
+        cursor: pointer;
+        display:block;
+        position:fixed;
+        right: 15px;
+        top: 20px;
+        height: 23px;
+        width:27px;
+        z-index: 12;
+    }
+}
+
+#opening-section{
+    display: flex;
+    flex-direction: row;
+    gap: 18vw;
+    height: 80vh;
+    align-content: center;
+    margin-top: 80px;
+    padding: 20px;
+}
+.opening-text-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+}
+#opening-pic {
+    /*align-items: self-end;*/
+    margin-top: 90px;
+    max-width: 100%;
+}
+#opening-text{
+    text-align: left;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+#opening-text span{
+    font-weight: 200;
+    font-style: italic;
+}
+.job-listings{
+    padding: 30px;
+
+}
+.available-jobs{
+    line-height: 1.5;
+    font-size: 30px;
+}
+.filter{
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    gap:40px ;
+    padding-top: 20px;
+}
+.filter input,select{
+    border: 0;
+    border-radius: 12px;
+    width:12vw;
+    height: 30px;
+}
+.filter-class{
+    display: flex;
+
+    justify-content: space-between;
+    gap: 20px;
+}
+#button-wrapper{
+    display: flex;
+    align-content: flex-start;
+}
+.action-btn {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    /*text-transform: uppercase;*/
+    /*width: 30%;*/
+    height: 50px;
+    border-radius: 25px;
+    background: #22ff00;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0 25px;
+    transition: all 0.4s;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    padding-top: 20px;
+}
+tr{
+    line-height: 4;
+    margin-top: 30px;
+    border-bottom: 1px solid #c2c2c2;
+}
+
