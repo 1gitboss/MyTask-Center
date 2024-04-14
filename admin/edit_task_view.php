@@ -27,7 +27,7 @@ if (isset($_GET['jobId'])){
 <body>
 <div class='form-wrap'>
     <div id="form-container">
-        <form action="http://localhost/mytask-center/actions/update_a_task.php" method="POST" id="task-form" name="create-task">
+        <form action="../actions/update_a_task.php" method="POST" id="task-form" name="create-task">
                 <span class="login100-form-title">
                         Edit Your Task
                 </span>

@@ -17,7 +17,7 @@ include "../functions/select_category_fxn.php"
 <body>
     <div class='form-wrap'>
         <div id="form-container">
-            <form action="http://localhost/mytask-center/actions/create_a_task_action.php" method="post" id="task-form" name="create-task">
+            <form action="../mytask-center/actions/create_a_task_action.php" method="post" id="task-form" name="create-task">
                 <span class="login100-form-title">
                         Create Your Task
                 </span>
