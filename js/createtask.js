@@ -20,7 +20,7 @@ taskForm.addEventListener("submit", (event) => {
 
     // Validate Title
     if (taskTitleValue === "") {
-        alert("Task title is required.");
+        taskTitleInput.setCustomValidity("Task title is required.");
         return;
     }
 
@@ -31,14 +31,14 @@ taskForm.addEventListener("submit", (event) => {
     }
 
     // Validate dob
-    if (workTimeValue === "" || workTimeValue=== 0) {
-        alert("A proper time is required.");
+    if (workTimeValue === "" || workTimeValue <= 0) {
+        workTimeInput.setCustomValidity("A proper time is required.");
         return;
     }
 
     // Email validation
-    if (priceValue === "") {
-        alert("A price is required.");
+    if (priceValue === "" || priceValue <= 0) {
+        priceInput.setCustomValidity("Please type in a price");
         return;
     }
 
@@ -50,7 +50,7 @@ taskForm.addEventListener("submit", (event) => {
     }
 
     if (descriptionValue === "") {
-        alert("A description is required.");
+        descriptionInput.setCustomValidity("A description is required.");
         return;
     }
 

@@ -1,7 +1,8 @@
 <?php
-$server= "localhost";
+$server= "127.0.0.1";
 $username= "root";
-$password= "";
+$password= "FzZsqq:ARta3";
+//$password= "";
 $database= "task_center";
 
 

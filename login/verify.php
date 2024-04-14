@@ -12,7 +12,7 @@ $result = mysqli_query($conn,$sql);
 
 if ($result) {
     echo "Your account is verified";
-    header("Location: http/localhost/login/login.php");
+    header("Location: http://localhost/mytask-center/login/login.php");
 
 
 }

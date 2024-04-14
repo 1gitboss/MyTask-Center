@@ -25,8 +25,8 @@ include "../login/sendEmail.php";
     $stmt->bind_param("issiiss", $role_id,$fname,$lname,$tel, $code,$email,$password) ;
 
     if($stmt->execute()){
-        echo "Registration successful. Please verify your email.";
         $sendMl->send($code);
+        header("Location: ../login/confirmEmail.php ");
     }else{ echo "Registration failed.";
          }
 

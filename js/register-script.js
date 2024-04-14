@@ -6,68 +6,50 @@ const emailInput = document.querySelector("#email");
 const passwordInput = document.querySelector("#password");
 const cnfPasswordInput = document.querySelector("#cnfPassword");
 
+const emailRegex= /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
+
+const fnameValue = fnameInput.value.trim();
+const lnameValue = lnameInput.value.trim();
+const telValue = telInput.value.trim();
+const emailValue = emailInput.value.trim();
+const passwordValue = passwordInput.value.trim();
+const cnfPasswordValue = cnfPasswordInput.value.trim();
+
+
 registerForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const fnameValue = fnameInput.value;
-  const lnameValue = lnameInput.value;
-  const telValue = telInput.value;
-  const emailValue = emailInput.value;
-  const passwordValue = passwordInput.value;
-  const cnfPasswordValue = cnfPasswordInput.value;
-
-  // Validate fname
-  if (fnameValue === "") {
-    alert("First name is required.");
-    return;
+  if (!emailValue.match(emailRegex)){
+    emailInput.setCustomValidity("A valid email address is required.")
   }
 
-  // Validate lname
-  if (lnameValue === "") {
-    alert("Last name is required.");
-    return;
+  if (!passwordValue.match(passwordRegex)) {
+    passwordInput.setCustomValidity('Password must\n  ' +
+        '      Have at least 8 characters long\n' +
+        '      Contain at least one uppercase letter\n' +
+        '      Contain at least one lowercase letter\n' +
+        '      Contain at least one digit\n' );
+
   }
 
-  // Validate dob
-  if (telValue === "") {
-    alert("Date of birth is required.");
-    return;
-  }
+  if (passwordValue !== cnfPasswordValue){
+    cnfPasswordInput.setCustomValidity('Passwords do not match.')
+  }else cnfPasswordInput.setCustomValidity('')
 
-  // Email validation
-  if (emailValue === "") {
-    alert("Email is required.");
-    return;
-  }
+  if (!fnameValue.match(/^[a-zA-Z]/))
+    fnameInput.setCustomValidity("First name is required.");
 
-  if (!emailValue.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)) {
-    alert("Invalid email address.");
-    return;
-  }
+  if (!lnameValue.match(/^[a-zA-Z]/))
+    lnameInput.setCustomValidity("Last name is required.");
 
-  // Validate password
-  if (passwordValue === "") {
-    alert("Password is required.");
-    return;
-  }
+  if (!telValue.match(/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im))
+    telInput.setCustomValidity("Proper phone number is required.");
 
-  if (!passwordValue.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$/)) {
-    alert("Invalid password. Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.");
-    return;
-  }
+    localStorage.setItem('email',emailValue);
 
-  // Validate confirm password
-  if (cnfPasswordValue === "") {
-    alert("Confirm password is required.");
-    return;
-  }
 
-  if (passwordValue !== cnfPasswordValue) {
-    alert("Passwords do not match.");
-    return;
-  }
-
-  // Submit form data to PHP script
+    // Submit form data to PHP script
   const formData = new FormData(registerForm)
     fetch("../actions/register_user_action.php", {
         method: "POST",
@@ -75,15 +57,34 @@ registerForm.addEventListener("submit", (event) => {
     })
     .then((response) => {
         if (response.status === 200) {
-           // alert("Registration successful. You can now log in.");
-            window.location.href = "../login/login.php";
+          swal({
+            title: "Success",
+            text: "Check your email to complete registration.",
+            type: "success",
+            confirmButtonText: "Ok",
+            // allowEscapeKey: true
+          })
+            window.location.href = "../login/confirmEmail.php";
         }
         else {
-            alert("error="+response.status);
-            // alert("Error occurred while registering.");
+          swal({
+            title: "Error!" + response.status,
+            text: "Error occurred while registering",
+            type: "error",
+            confirmButtonText: "Ok",
+            allowEscapeKey: true
+          });
+            window.location.href = "../login/register.php"
         }
     })
     .catch((_error) => {
-        alert("Error occurred while registering. Please try again.");
+      swal({
+        title: "Error!",
+        text: "Error occurred while registering. Try again.",
+        type: "error",
+        confirmButtonText: "Ok",
+        allowEscapeKey: true
+      });
+      window.location.href = "../login/register.php"
     });
 });

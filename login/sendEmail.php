@@ -52,7 +52,7 @@ use PHPMailer\PHPMailer\Exception;
 
             $mail->Subject = 'Email verification';
 
-            $mail->Body    = 'Please click this button to verify your account: <a href=http://localhost/login/verify.php?code='.$code.'>Verify</a>' ;
+            $mail->Body    = 'Please click this button to verify your account: <a href=http://localhost/mytask-center/login/verify.php?code='.$code.'>Verify</a>' ;
 
  
 

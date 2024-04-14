@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="../css/register.css">
     <link rel="icon" type="image/png" href="../assests/logo/logo-png.png"/>
+    <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Register</title>
@@ -94,6 +96,12 @@
 			</div>
 		</div>
 	</div>
+    <script>
+        const emailInput = document.querySelector("#email");
+        const emailValue = emailInput.value.trim();
+        localStorage.setItem('email',emailValue);
+    </script>
+
 
     <script src="../js/register-script.js"></script>
 </body>
