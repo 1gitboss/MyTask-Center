@@ -108,7 +108,7 @@
                 </div>
 
                 <!--Call to Action-->
-                <a href=" ../MyTask-Center/view/overviewpage.php" class="button">FIND YOUR NEXT TASK</a>
+                <a href=" ../MyTask-Center/view/overview.php" class="button">FIND YOUR NEXT TASK</a>
                 <!--End Call to Action-->
 
             </div>
@@ -140,7 +140,7 @@
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.1s">
                         <!--Icon-->
                         <div class="icon">
-                            <i class="fa-regular fa-pen-to-square"></i>
+                            <i class="fa fa-pencil fa-2x"></i>
                         </div>
                         <!--Icon Block Description-->
                         <div class="icon-block-description">
@@ -155,7 +155,7 @@
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.3s">
                         <!--Icon-->
                         <div class="icon">
-                            <i class="fa-regular fa-thumbtack"></i>
+                            <i class="fa fa-thumb-tack fa-2x"></i>
                         </div>
                         <!--Icon Block Description-->
                         <div class="icon-block-description">
@@ -170,10 +170,10 @@
                     <div class="col-2 icon-block icon-top wow fadeInUp" data-wow-delay="0.5s">
                         <!--Icon-->
                         <div class="icon">
-                            <i class="fa fa-tablet fa-2x"></i>
+                            <i class="fa fa-star fa-2x"></i>
                         </div>
                         <!--Icon Block Description-->
-                        <div class="fa-regular fa-star">
+                        <div class="icon-block-description">
                             <h4>Cost Effective</h4>
                             <p>Set you available task fee and get people who are 
                                 comfortable with it reach out to you.</p>

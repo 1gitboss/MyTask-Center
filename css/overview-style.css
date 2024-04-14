@@ -42,6 +42,10 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, blockquote
     direction: ltr;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -164,6 +168,20 @@ tr {
     border-bottom: 1px solid #c2c2c2;
 }
 
+tr:hover{
+    background-color: #d8d8d8;
+    color: #666666;
+}
+
+td{
+    width:45% ;
+}
+
+span{
+    font-weight: 400;
+    /*font-style: italic;*/
+}
+
 input[type="submit"] {
     cursor: pointer;
     border-style: solid;
@@ -171,7 +189,9 @@ input[type="submit"] {
     padding-top: 0;
     padding-bottom: 0;
 }
-
+#job-counter{
+    font-style: oblique;
+}
 select {
     border: 1px solid #e1e1e1;
     height: 40px;
@@ -851,6 +871,11 @@ h6 {
 
 .icon-left .icon-block-description {
     padding-left: 53px;
+}
+#nav-element{
+    position: absolute;
+    color: #d2b356 ;
+    right: 40px;
 }
 
 /* Icon Right */

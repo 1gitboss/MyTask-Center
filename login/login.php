@@ -14,12 +14,12 @@
 		<div class="container-login100">
 			<div class="wrap-login100">
 				<div class="login100-pic ">
-					<img src="../assests/logo/logo-no-background.png" alt="IMG">
+                    <a href="../index.php"><img src="../assests/logo/logo-no-background.png" alt="IMG"></a>
 				</div>
 
 				<form class="login100-form validate-form" method="post" name="login-form" action="../actions/login_user_action.php">
 					<span class="login100-form-title">
-						Member Login
+						Welcome Login Here
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
@@ -50,6 +50,7 @@
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
+                        <p style="font-size: 8px">click logo to go to homepage</p>
 					</div>
 				</form>
 			</div>

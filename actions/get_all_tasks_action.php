@@ -56,6 +56,7 @@ function getTasksCompleted()
 {
     $User_Id=$_SESSION['user_id'];
     global $conn;
+
     $sql="SELECT * FROM jobs WHERE StatusId=3 AND UserID= '$User_Id' ";
     $stmt= mysqli_query($conn, $sql);
 
@@ -68,7 +69,21 @@ function getTasksCompleted()
 function getOther()
 {
     global $conn;
-    $sql="SELECT * FROM jobs WHERE `CategoryID` =5 ";
+    $sql="SELECT *, Users.email FROM jobs 
+            JOIN Users ON jobs.UserID = Users.UserID 
+                         WHERE `CategoryID` =5 ";
+    $stmt= mysqli_query($conn, $sql);
+
+    if ($stmt){
+        return mysqli_fetch_all($stmt,MYSQLI_ASSOC);
+    }else return false;
+
+}
+
+function getTotal()
+{
+    global $conn;
+    $sql="SELECT * FROM jobs";
     $stmt= mysqli_query($conn, $sql);
 
     if ($stmt){
@@ -79,7 +94,10 @@ function getOther()
 function getOffice()
 {
     global $conn;
-    $sql="SELECT * FROM jobs WHERE `CategoryID` =4 ";
+    $sql="SELECT *, Users.email FROM jobs 
+            JOIN Users ON jobs.UserID = Users.UserID 
+                         WHERE `CategoryID` =4 ";
+
     $stmt= mysqli_query($conn, $sql);
 
     if ($stmt){
@@ -91,7 +109,9 @@ function getOffice()
 function getAssistance()
 {
     global $conn;
-    $sql="SELECT * FROM jobs WHERE `CategoryID` =3 ";
+    $sql="SELECT *, Users.email FROM jobs 
+            JOIN Users ON jobs.UserID = Users.UserID 
+                         WHERE `CategoryID` =3 ";
     $stmt= mysqli_query($conn, $sql);
 
     if ($stmt){
@@ -103,7 +123,9 @@ function getAssistance()
 function getOutdoor()
 {
     global $conn;
-    $sql="SELECT * FROM jobs WHERE `CategoryID` =2 ";
+    $sql="SELECT *, Users.email FROM jobs 
+            JOIN Users ON jobs.UserID = Users.UserID 
+                         WHERE `CategoryID` =2 ";
     $stmt= mysqli_query($conn, $sql);
 
     if ($stmt){
@@ -115,7 +137,9 @@ function getOutdoor()
 function getCleaning()
 {
     global $conn;
-    $sql="SELECT * FROM jobs WHERE `CategoryID` =1 ";
+    $sql="SELECT *, Users.email FROM jobs 
+            JOIN Users ON jobs.UserID = Users.UserID 
+                         WHERE `CategoryID` =1 ";
     $stmt= mysqli_query($conn, $sql);
 
     if ($stmt){

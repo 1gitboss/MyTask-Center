@@ -71,6 +71,7 @@
   textarea {
     outline: none;
     border: none;
+    resize:none;
   }
 
   textarea:focus, input:focus {
@@ -102,8 +103,39 @@
       outline: none;
       border: none;
       background: transparent;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+
+    width: 50%;
+    height: 50px;
+    border-radius: 25px;
+    background: #57b846;
+
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
   }
 
+  .close-btn{
+    width: 30%;
+    height: 50px;
+    border-radius: 25px;
+    background: #d03434;
+
+  }
   button:hover {
       cursor: pointer;
   }
@@ -344,7 +376,8 @@
 
 
   @media (max-width: 992px) {
-    .wrap-login100 {
+
+    #form-container {
       padding: 177px 90px 33px 85px;
     }
 

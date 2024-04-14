@@ -25,6 +25,7 @@ include "../functions/homepage_fxn.php";
     <div class="sidebar">
         <div class="nav-btn"><i class="ri-dashboard-2-line"></i><a href="../admin/dashboard.php">Dashboard </a></div>
         <div class="nav-btn"> <i class="ri-file-add-line"></i> <a href="createtask.php"> Create Task</a> </div>
+        <div class="nav-btn"> <i class="ri-home-3-line"></i> <a href="../view/overview.php"> Home </a> </div>
 
         <div class="nav-btn" id="logout"> <i class="ri-logout-box-line"></i><a id="logout" href="../login/logout.php">Logout</a></div>
     </div>
