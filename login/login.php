@@ -17,7 +17,7 @@
 					<img src="../assests/logo/logo-no-background.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" method="post" name="login-form" action="http://localhost/MyTask-Center/actions/login_user_action.php">
+				<form class="login100-form validate-form" method="post" name="login-form" action="../actions/login_user_action.php">
 					<span class="login100-form-title">
 						Member Login
 					</span>
