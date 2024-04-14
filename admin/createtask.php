@@ -15,9 +15,11 @@ include "../functions/select_category_fxn.php"
     <title>Create task </title>
 </head>
 <body>
+
     <div class='form-wrap'>
+
         <div id="form-container">
-            <form action="../mytask-center/actions/create_a_task_action.php" method="post" id="task-form" name="create-task">
+                <form  action="../mytask-center/actions/create_a_task_action.php" method="post" id="task-form" name="create-task">
                 <span class="login100-form-title">
                         Create Your Task
                 </span>
@@ -54,17 +56,22 @@ include "../functions/select_category_fxn.php"
                 <div>
                     <label for="description">Task Description</label>
                     <textarea type="text" name="description"
-                    class="input100" id="description" required> </textarea>
+                    class="input100" id="description"  cols="30" rows="4"> </textarea>
                 </div><br>
 
-<!--                <div class="container-submit-task-btn">-->
+                <div class="container-submit-task-btn">
                     <button type="submit" class="submit-task-btn" >
                         Submit</button>
-<!--                </div>-->
-            </form>
-        </div>
+                    <button onclick="window.location.href='../admin/dashboard.php' " class="close-btn" >
+                        Close</button>
 
-    </div>
+
+                </div>
+
+                </form>
+            </div>
+
+        </div>
     <script src="../js/createtask.js"></script>
 </body>
 </html>

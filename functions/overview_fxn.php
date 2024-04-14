@@ -26,17 +26,23 @@ function numOther(){
 
     return count($tasks);
 }
+function numTotal(){
+    $tasks = getTotal() ;
+
+    return count($tasks);
+}
 
 function getAllOther() {
     $tasks = getOther() ;
     foreach ($tasks as $task) {
         echo "<table>";
-        echo "<tr>";
+        echo "<tr onclick='window.location.href=\" ../view/taskDetails.php?jobId={$task['JobID']}\";'>";
+
         echo "<td>{$task['Title']}</td>";
 
         echo "<td>{$task['Location']}</td>";
 
-        echo "<td>> {>} </td>";
+        echo "<td>>  </td>";
         echo "</tr>";
         echo "</table>";
 
@@ -45,13 +51,14 @@ function getAllOther() {
 }function getAllOffice() {
     $tasks = getOffice() ;
     foreach ($tasks as $task) {
+
         echo "<table>";
-        echo "<tr>";
+        echo "<tr onclick='window.location.href=\" ../view/taskDetails.php?jobId={$task['JobID']}\";'>";
         echo "<td>{$task['Title']}</td>";
 
         echo "<td>{$task['Location']}</td>";
 
-        echo "<td>> {>} </td>";
+        echo "<td>>  </td>";
         echo "</tr>";
         echo "</table>";
 
@@ -61,12 +68,12 @@ function getAllOther() {
     $tasks = getOutdoor() ;
     foreach ($tasks as $task) {
         echo "<table>";
-        echo "<tr>";
+        echo "<tr onclick='window.location.href=\" ..//view/taskDetails.php?jobId={$task['JobID']}\";'>";
         echo "<td>{$task['Title']}</td>";
 
-        echo "<td>{$task['Location']}</td>";
+       echo "<td>{$task['Location']}</td>";
 
-        echo "<td>> {>} </td>";
+        echo "<td>>  </td>";
         echo "</tr>";
         echo "</table>";
 
@@ -76,12 +83,14 @@ function getAllOther() {
     $tasks = getCleaning() ;
     foreach ($tasks as $task) {
         echo "<table>";
-        echo "<tr>";
+        echo "<tr onclick='window.location.href=\" ../view/taskDetails.php?jobId={$task['JobID']}\";'>";
+
+
         echo "<td>{$task['Title']}</td>";
 
         echo "<td>{$task['Location']}</td>";
 
-        echo "<td>> {>} </td>";
+        echo "<td>>  </td>";
         echo "</tr>";
         echo "</table>";
 
@@ -91,12 +100,14 @@ function getAllOther() {
     $tasks = getAssistance() ;
     foreach ($tasks as $task) {
         echo "<table>";
-        echo "<tr>";
+        echo "<tr onclick='window.location.href=\" ../view/taskDetails.php?jobId={$task['JobID']}\";'>";
+
+
         echo "<td>{$task['Title']}</td>";
 
         echo "<td>{$task['Location']}</td>";
 
-        echo "<td>> {>} </td>";
+        echo "<td>>  </td>";
         echo "</tr>";
         echo "</table>";
 
