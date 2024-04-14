@@ -65,3 +65,62 @@ function getTasksCompleted()
 
 }
 
+function getOther()
+{
+    global $conn;
+    $sql="SELECT * FROM jobs WHERE `CategoryID` =5 ";
+    $stmt= mysqli_query($conn, $sql);
+
+    if ($stmt){
+        return mysqli_fetch_all($stmt,MYSQLI_ASSOC);
+    }else return false;
+
+}
+function getOffice()
+{
+    global $conn;
+    $sql="SELECT * FROM jobs WHERE `CategoryID` =4 ";
+    $stmt= mysqli_query($conn, $sql);
+
+    if ($stmt){
+        return mysqli_fetch_all($stmt,MYSQLI_ASSOC);
+    }else return false;
+
+}
+
+function getAssistance()
+{
+    global $conn;
+    $sql="SELECT * FROM jobs WHERE `CategoryID` =3 ";
+    $stmt= mysqli_query($conn, $sql);
+
+    if ($stmt){
+        return mysqli_fetch_all($stmt,MYSQLI_ASSOC);
+    }else return false;
+
+}
+
+function getOutdoor()
+{
+    global $conn;
+    $sql="SELECT * FROM jobs WHERE `CategoryID` =2 ";
+    $stmt= mysqli_query($conn, $sql);
+
+    if ($stmt){
+        return mysqli_fetch_all($stmt,MYSQLI_ASSOC);
+    }else return false;
+
+}
+
+function getCleaning()
+{
+    global $conn;
+    $sql="SELECT * FROM jobs WHERE `CategoryID` =1 ";
+    $stmt= mysqli_query($conn, $sql);
+
+    if ($stmt){
+        return mysqli_fetch_all($stmt,MYSQLI_ASSOC);
+    }else return false;
+
+}
+
